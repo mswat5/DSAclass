@@ -35,22 +35,12 @@ int main()
 
   ll t;cin>>t;
   while(t--){
-   ll n,ans=0; cin>>n;
-   
-   vll a(n); for(ll i=1;i<=n;i++) cin>>a[i];
-   sort(a.begin(), a.end(), [](int x, int y) {
-      return x % 2 < y % 2;
-    });
-   for(ll i=1;i<=n;i++){
-     for(ll j=i+1;j<=n;j++){
-    if(__gcd(a[i],2*a[j])>1){
-ans++;
-    }
-   
-   }
+    string s; cin>>s;
+  ll a=0,b=0;
+  while(b>a || )
+
   }
-  cout<<ans<<endl;
-  }
+
     clock_t endTime = clock();
     cerr << "\nTime: " << double(endTime - startTime) / CLOCKS_PER_SEC << " seconds" << endl;
     return 0;
