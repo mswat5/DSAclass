@@ -1,5 +1,6 @@
-
+#include <stdio.h>
 #include <algorithm>
+#include <assert.h>
 #include <string>
 #include <cstring>
 #include <map>
@@ -20,7 +21,6 @@ typedef long long ll;
 #define vll vector<ll>
 #define py cout << "YES" << endl;
 #define pn cout << "NO" << endl;
-#define el '\n'
 
 int GCD(int a, int b)
 {
@@ -32,28 +32,18 @@ int GCD(int a, int b)
 int main()
 {
     clock_t startTime = clock();
-ll t;cin>>t;
-while(t--){
-    ll n; cin>>n;
-    vll a(2*n);
-    fl(i,2*n)cin>>a[i];
-    sort(a.begin(),a.end());
-    ll i=0,j=2*n -1;
-    vector< pair<ll,ll> > p;
-    while(j>i){
-        p.PB(MP(a[i],a[j]));
-        j--; i++;
-    }
-    ll dist=0;
-    for (int i = 1; i < p.size(); i++){
-        dist+= abs(p[i].first - p[i-1].first)+abs(p[i].second - p[i-1].second);
-    }
-    cout<<dist<<el;
-    fl(i,p.size()){
-        cout<<p[i].first<<" "<<p[i].second<<el;
-    }
-}
-  
+
+  ll t,n;cin>>t;
+  while(t--){
+  cin>>n;
+ ll rem= n%2020; //take it on examples to understand it more
+ if(rem<=n/2020){
+    py
+ }else pn
+// i then did on copy 
+//jese ki 2020 se divide krke x quotient aya and jitna rem aya so 2020 se x-rem time divide hoga and 2021 se rem times
+//aisa hm baki consecutive no's k lie bhi kr skte
+  }
     clock_t endTime = clock();
     cerr << "\nTime: " << double(endTime - startTime) / CLOCKS_PER_SEC << " seconds" << endl;
     return 0;

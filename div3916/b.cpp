@@ -1,5 +1,6 @@
-
+#include <stdio.h>
 #include <algorithm>
+#include <assert.h>
 #include <string>
 #include <cstring>
 #include <map>
@@ -32,27 +33,22 @@ int GCD(int a, int b)
 int main()
 {
     clock_t startTime = clock();
-ll t;cin>>t;
-while(t--){
-    ll n; cin>>n;
-    vll a(2*n);
-    fl(i,2*n)cin>>a[i];
-    sort(a.begin(),a.end());
-    ll i=0,j=2*n -1;
-    vector< pair<ll,ll> > p;
-    while(j>i){
-        p.PB(MP(a[i],a[j]));
-        j--; i++;
+
+  ll t,n;cin>>t;
+  while(t--){
+   ll n;cin>>n;
+    string s; cin>>s;
+    ll i=0,cnt=0,prev=s[0];
+    while(n>0){
+    
+     
     }
-    ll dist=0;
-    for (int i = 1; i < p.size(); i++){
-        dist+= abs(p[i].first - p[i-1].first)+abs(p[i].second - p[i-1].second);
-    }
-    cout<<dist<<el;
-    fl(i,p.size()){
-        cout<<p[i].first<<" "<<p[i].second<<el;
-    }
-}
+
+
+
+
+  }
+
   
     clock_t endTime = clock();
     cerr << "\nTime: " << double(endTime - startTime) / CLOCKS_PER_SEC << " seconds" << endl;

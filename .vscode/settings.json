@@ -58,16 +58,9 @@
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
   "files.associations": {
     "*.js": "javascript",
-    "vector": "cpp",
-    "__split_buffer": "cpp",
-    "deque": "cpp",
     "string": "cpp",
     "iostream": "cpp",
-    "complex": "cpp",
-    "chrono": "cpp",
     "ostream": "cpp",
-    "map": "cpp",
-    "iosfwd": "cpp",
-    "istream": "cpp"
+    "iosfwd": "cpp"
   }
 }

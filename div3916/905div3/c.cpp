@@ -9,6 +9,7 @@
 #include <queue>
 #include <cmath>
 #include <ctime>
+//#include <bit/stdc++.h>
 using namespace std;
 
 typedef long long ll;
@@ -32,27 +33,35 @@ int GCD(int a, int b)
 int main()
 {
     clock_t startTime = clock();
-ll t;cin>>t;
-while(t--){
-    ll n; cin>>n;
-    vll a(2*n);
-    fl(i,2*n)cin>>a[i];
-    sort(a.begin(),a.end());
-    ll i=0,j=2*n -1;
-    vector< pair<ll,ll> > p;
-    while(j>i){
-        p.PB(MP(a[i],a[j]));
-        j--; i++;
+
+  ll t;cin>>t;
+  
+  while(t--){
+  ll n,k; cin>>n>>k;
+  ll f=1;
+  ll rem=INT_MIN, mrem=INT_MIN;
+    vll a(n); 
+    fl(i,n) cin>>a[i];
+ll ans=1e15;
+    fl(i,n){
+        ll cur=k - a[i] % k;
+        if(a[i]%k==0)cur=0;//we just want atleast 1 element divisible by k, if we found that then no oprtns needed
+        ans=min(ans,cur);
     }
-    ll dist=0;
-    for (int i = 1; i < p.size(); i++){
-        dist+= abs(p[i].first - p[i-1].first)+abs(p[i].second - p[i-1].second);
+
+//as k is only [2,5]
+    if(k==4){//as isse divisible wale 2 se to honge hi so uske lie check krna would be grt
+        ll cnt=0;
+        fl(i,n){
+            if(a[i]%2==0)cnt++;
+        }//agr do se jyada even milgye hme then product 4 se hojayega 
+        if(cnt>1)ans=0;
+        else ans=min(ans,2-cnt);
     }
-    cout<<dist<<el;
-    fl(i,p.size()){
-        cout<<p[i].first<<" "<<p[i].second<<el;
-    }
-}
+
+  cout<<ans<<el;
+  }
+
   
     clock_t endTime = clock();
     cerr << "\nTime: " << double(endTime - startTime) / CLOCKS_PER_SEC << " seconds" << endl;
